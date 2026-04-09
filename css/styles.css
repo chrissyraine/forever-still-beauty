@@ -52,7 +52,7 @@
   --font-serif:  'Cormorant Garamond', Georgia, serif;
   --font-sans:   'Jost', system-ui, -apple-system, sans-serif;
 
-  --nav-h:    76px;
+  --nav-h:    160px;
   --max-w:    1200px;
   --pad:      0 clamp(1.5rem, 5vw, 4rem);
 
