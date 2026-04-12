@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO: Page title -->
+  <title>Shop — Forever Still Beauty</title>
+
+  <!-- SEO: Meta description -->
+  <meta name="description" content="Shop the Forever Still Beauty collection — luxurious skincare rituals, lip colour, face oils, digital beauty guides, and curated sets. Clean. Considered. Yours.">
+
+  <!-- SEO: Open Graph -->
+  <meta property="og:title" content="Shop — Forever Still Beauty">
+  <meta property="og:description" content="Skincare, colour, collections, and digital guides. Every product designed to feel like a ritual.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- =============================================
+       NAVIGATION
+  ============================================= -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Forever Still Beauty — Home">
+        Forever Still <span>Beauty</span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="shop.html" class="active">Shop</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav__bag" aria-label="Shopping bag, 0 items">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        Bag (0)
+      </button>
+      <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav__mobile" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="shop.html">Shop</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <main>
+
+    <!-- =============================================
+         PAGE HERO
+    ============================================= -->
+    <section class="page-hero" aria-labelledby="shop-hero-title">
+      <p class="eyebrow page-hero__eyebrow">The Collection</p>
+      <!-- REPLACE: Update headline if needed -->
+      <h1 class="page-hero__title" id="shop-hero-title">
+        Every ritual,<br><em>beautifully yours.</em>
+      </h1>
+      <p class="page-hero__sub">
+        Clean formulas, considered design, and products that feel like coming home.
+      </p>
+    </section>
+
+    <!-- =============================================
+         NEW ARRIVALS BANNER
+    ============================================= -->
+    <div class="brand-strip" aria-label="New arrivals announcement">
+      <div class="brand-strip__inner">
+        <span class="brand-strip__item">New Arrival: Rose Veil Facial Mist</span>
+        <span class="brand-strip__item">Now Available: Everyday Elegance Beauty Guide</span>
+        <span class="brand-strip__item">Coming Soon: The Velvet Skin Collection</span>
+      </div>
+    </div>
+
+    <!-- =============================================
+         FILTER + PRODUCT GRID
+    ============================================= -->
+    <section class="section" aria-labelledby="products-heading">
+      <div class="container">
+
+        <h2 id="products-heading" class="text-center reveal" style="font-size:clamp(1.6rem,3vw,2.4rem);margin-bottom:2.5rem;">
+          All Products
+        </h2>
+
+        <!-- Filter Tabs -->
+        <!-- REPLACE: Add/edit filter categories to match your real product range -->
+        <nav class="shop-filters reveal" aria-label="Filter products by category">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="skincare">Skincare</button>
+          <button class="filter-btn" data-filter="colour">Colour</button>
+          <button class="filter-btn" data-filter="collections">Collections</button>
+          <button class="filter-btn" data-filter="digital">Digital Guides</button>
+        </nav>
+
+        <!-- Product Grid — 8 Products -->
+        <div class="products-grid">
+
+          <!-- Product 1 -->
+          <article class="product-card pc-glow reveal reveal-delay-1" data-cat="skincare">
+            <div class="product-card__img">
+              <!-- REPLACE: <img src="images/product-glow-ritual-set.jpg" alt="The Glow Ritual Set — morning and evening skincare essentials"> -->
+              <div class="product-card__img-fill" role="img" aria-label="The Glow Ritual Set product image placeholder"></div>
+              <span class="product-card__badge">Bestseller</span>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Skincare</p>
+              <h3 class="product-card__name">The Glow Ritual Set</h3>
+              <p class="product-card__desc">A curated ritual for luminous, healthy skin. Morning and evening essentials in one beautiful set.</p>
+              <div class="product-card__footer">
+                <!-- REPLACE: Update price -->
+                <span class="product-card__price">$68</span>
+                <!-- REPLACE: Update button to link to your store product page or connect to cart -->
+                <button class="product-card__btn" aria-label="Add The Glow Ritual Set to bag">Add to Bag</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 2 -->
+          <article class="product-card pc-lip reveal reveal-delay-2" data-cat="colour">
+            <div class="product-card__img">
+              <!-- REPLACE: <img src="images/product-soft-focus-lip.jpg" alt="Soft Focus Lip Collection — five wearable muted shades"> -->
+              <div class="product-card__img-fill" role="img" aria-label="Soft Focus Lip Collection product image placeholder"></div>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Colour</p>
+              <h3 class="product-card__name">Soft Focus Lip Collection</h3>
+              <p class="product-card__desc">Five muted, wearable shades for every mood. From barely-there to quietly bold.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">$42</span>
+                <button class="product-card__btn" aria-label="Add Soft Focus Lip Collection to bag">Add to Bag</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 3 -->
+          <article class="product-card pc-mist reveal reveal-delay-3" data-cat="skincare">
+            <div class="product-card__img">
+              <!-- REPLACE: <img src="images/product-rose-veil-mist.jpg" alt="Rose Veil Facial Mist — rosewater face mist"> -->
+              <div class="product-card__img-fill" role="img" aria-label="Rose Veil Facial Mist product image placeholder"></div>
+              <span class="product-card__badge product-card__badge--new">New</span>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Skincare</p>
+              <h3 class="product-card__name">Rose Veil Facial Mist</h3>
+              <p class="product-card__desc">A weightless mist that softens, refreshes, and sets. Rosewater meets thoughtful skin science.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">$34</span>
+                <button class="product-card__btn" aria-label="Add Rose Veil Facial Mist to bag">Add to Bag</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 4 -->
+          <article class="product-card pc-oil reveal reveal-delay-4" data-cat="skincare">
+            <div class="product-card__img">
+              <!-- REPLACE: <img src="images/product-golden-hour-oil.jpg" alt="Golden Hour Face Oil — lightweight glow face oil"> -->
+              <div class="product-card__img-fill" role="img" aria-label="Golden Hour Face Oil product image placeholder"></div>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Skincare</p>
+              <h3 class="product-card__name">Golden Hour Face Oil</h3>
+              <p class="product-card__desc">A lightweight face oil that catches the light and nourishes deeply. Your natural glow, amplified.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">$58</span>
+                <button class="product-card__btn" aria-label="Add Golden Hour Face Oil to bag">Add to Bag</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 5 -->
+          <article class="product-card pc-guide reveal reveal-delay-1" data-cat="digital">
+            <div class="product-card__img">
+              <!-- REPLACE: <img src="images/product-beauty-guide.jpg" alt="Everyday Elegance Beauty Guide — downloadable PDF beauty guide"> -->
+              <div class="product-card__img-fill" role="img" aria-label="Everyday Elegance Beauty Guide product image placeholder"></div>
+              <span class="product-card__badge">Digital</span>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Digital Guide</p>
+              <h3 class="product-card__name">Everyday Elegance Beauty Guide</h3>
+              <p class="product-card__desc">A downloadable guide to building a beauty routine that feels like self-care, not a chore. Instant delivery.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">$18</span>
+                <button class="product-card__btn" aria-label="Purchase Everyday Elegance Beauty Guide">Buy Guide</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 6 -->
+          <article class="product-card pc-velvet reveal reveal-delay-2" data-cat="collections">
+            <div class="product-card__img">
+              <!-- REPLACE: <img src="images/product-velvet-skin-body.jpg" alt="Velvet Skin Body Collection — body butter, scrub, and oil"> -->
+              <div class="product-card__img-fill" role="img" aria-label="Velvet Skin Body Collection product image placeholder"></div>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Collections</p>
+              <h3 class="product-card__name">Velvet Skin Body Collection</h3>
+              <p class="product-card__desc">Rich body butter, exfoliating scrub, and a hydrating oil. A ritual-worthy trio for skin that craves nourishment.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">$72</span>
+                <button class="product-card__btn" aria-label="Add Velvet Skin Body Collection to bag">Add to Bag</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 7 -->
+          <article class="product-card pc-palette reveal reveal-delay-3" data-cat="colour">
+            <div class="product-card__img">
+              <!-- REPLACE: <img src="images/product-minimalist-palette.jpg" alt="The Minimalist Palette — six neutral tones for eyes and brows"> -->
+              <div class="product-card__img-fill" role="img" aria-label="The Minimalist Palette product image placeholder"></div>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Colour</p>
+              <h3 class="product-card__name">The Minimalist Palette</h3>
+              <p class="product-card__desc">Six neutral tones for eyes, brows, and shadow. Edit your look with intention — never overdo it.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">$48</span>
+                <button class="product-card__btn" aria-label="Add The Minimalist Palette to bag">Add to Bag</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 8 -->
+          <article class="product-card pc-bundle reveal reveal-delay-4" data-cat="collections">
+            <div class="product-card__img">
+              <!-- REPLACE: <img src="images/product-soft-strength-bundle.jpg" alt="Soft Strength Skincare Bundle — bestselling trio for sensitive skin"> -->
+              <div class="product-card__img-fill" role="img" aria-label="Soft Strength Skincare Bundle product image placeholder"></div>
+              <span class="product-card__badge">Bundle &amp; Save</span>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Collections</p>
+              <h3 class="product-card__name">Soft Strength Skincare Bundle</h3>
+              <p class="product-card__desc">Our bestselling trio for sensitive skin that craves nourishment without overwhelm. The full ritual, beautifully bundled.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">$94</span>
+                <button class="product-card__btn" aria-label="Add Soft Strength Skincare Bundle to bag">Add to Bag</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+        <!-- End product grid -->
+
+      </div>
+    </section>
+
+    <!-- =============================================
+         COMING SOON
+    ============================================= -->
+    <section class="coming-soon" aria-labelledby="coming-soon-heading">
+      <div class="container--narrow" style="position:relative;z-index:2;">
+        <p class="eyebrow coming-soon__eyebrow reveal">On the Horizon</p>
+        <h2 class="coming-soon__title reveal" id="coming-soon-heading">
+          Something new is<br><em>almost ready.</em>
+        </h2>
+        <!-- REPLACE: Update this text to describe your real upcoming launch -->
+        <p class="coming-soon__sub reveal">
+          A limited edition collection that has been in development for months. Crafted with even more intention than everything that came before it. Sign up to be the first to know.
+        </p>
+        <div class="reveal">
+          <!-- REPLACE: Connect to your email platform -->
+          <form class="newsletter__form" style="max-width:400px;margin:0 auto;" novalidate>
+            <input type="email" class="newsletter__input" placeholder="Notify me when it drops" aria-label="Email for new arrival notification" required>
+            <button type="submit" class="newsletter__submit">Notify Me</button>
+          </form>
+          <p class="newsletter__success">You're on the list. We'll be in touch very soon.</p>
+          <p class="newsletter__note" style="margin-top:1rem;">No spam, ever. Unsubscribe any time.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         BRAND PROMISE STRIP
+    ============================================= -->
+    <section class="section section--blush" aria-label="Brand promises">
+      <div class="container">
+        <div class="values-grid">
+          <div class="value-card reveal reveal-delay-1">
+            <div class="value-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4">
+                <rect x="6" y="14" width="32" height="22" rx="1"/>
+                <path d="M14 14V10a8 8 0 0116 0v4"/>
+              </svg>
+            </div>
+            <h3 class="value-card__title">Secure Checkout</h3>
+            <p class="value-card__text">Your payment information is always safe. SSL-encrypted checkout on every order.</p>
+          </div>
+          <div class="value-card reveal reveal-delay-2">
+            <div class="value-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4">
+                <circle cx="22" cy="22" r="16"/>
+                <path d="M22 12v10l6 4"/>
+              </svg>
+            </div>
+            <h3 class="value-card__title">Fast Shipping</h3>
+            <!-- REPLACE: Update with your real shipping promise -->
+            <p class="value-card__text">Orders ship within 2–3 business days. Free shipping on orders over $60.</p>
+          </div>
+          <div class="value-card reveal reveal-delay-3">
+            <div class="value-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4">
+                <path d="M22 4l2.5 10H36l-9 6.5 3.5 10.5L22 26l-8.5 5 3.5-10.5L8 14h11.5L22 4z"/>
+              </svg>
+            </div>
+            <h3 class="value-card__title">Beauty Guarantee</h3>
+            <!-- REPLACE: Update with your real return policy -->
+            <p class="value-card__text">Not in love? We'll make it right. 30-day return policy, no questions asked.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         NEWSLETTER
+    ============================================= -->
+    <section class="newsletter" id="newsletter" aria-labelledby="newsletter-shop-heading">
+      <div class="container">
+        <p class="eyebrow newsletter__eyebrow reveal">Join the Ritual</p>
+        <h2 class="newsletter__title reveal" id="newsletter-shop-heading">
+          Early access. New arrivals. Quiet beauty wisdom.
+        </h2>
+        <p class="newsletter__sub reveal">
+          Be the first to know about new launches and exclusive offers — delivered with intention.
+        </p>
+        <div class="reveal">
+          <!-- REPLACE: Connect to your email platform -->
+          <form class="newsletter__form" novalidate>
+            <input type="email" class="newsletter__input" placeholder="Your email address" aria-label="Email for newsletter" required>
+            <button type="submit" class="newsletter__submit">Subscribe</button>
+          </form>
+          <p class="newsletter__success">Thank you — you're part of the ritual now.</p>
+          <p class="newsletter__note">We respect your privacy. Unsubscribe at any time.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =============================================
+       FOOTER
+  ============================================= -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand-name">Forever Still Beauty</p>
+          <p class="footer__brand-tagline">Where softness becomes strength.</p>
+          <p class="footer__brand-desc">Thoughtfully made beauty products and rituals for the woman who knows confidence is quiet.</p>
+          <div class="footer__socials">
+            <!-- REPLACE: Add your real social URLs -->
+            <a href="#" class="footer__social-link" aria-label="Instagram">IG</a>
+            <a href="#" class="footer__social-link" aria-label="TikTok">TK</a>
+            <a href="#" class="footer__social-link" aria-label="Pinterest">PI</a>
+            <a href="#" class="footer__social-link" aria-label="Facebook">FB</a>
+          </div>
+        </div>
+        <div>
+          <p class="footer__col-title">Shop</p>
+          <ul class="footer__links" role="list">
+            <li><a href="shop.html">All Products</a></li>
+            <li><a href="shop.html">Skincare</a></li>
+            <li><a href="shop.html">Colour</a></li>
+            <li><a href="shop.html">Collections</a></li>
+            <li><a href="shop.html">Digital Guides</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Company</p>
+          <ul class="footer__links" role="list">
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Shipping &amp; Returns</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Stay Connected</p>
+          <p style="font-size:0.8rem;color:rgba(255,255,255,0.3);margin-bottom:1.3rem;line-height:1.7;">Rituals, beauty notes, and offers — quiet and beautiful, in your inbox.</p>
+          <div class="footer__mini-form">
+            <input type="email" placeholder="Your email address" aria-label="Email for footer newsletter">
+            <button type="button">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2024 Forever Still Beauty. All rights reserved.</p>
+        <nav class="footer__legal" aria-label="Legal links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Accessibility</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
