@@ -1025,10 +1025,7 @@ h1, h2, h3, h4, h5, h6 {
 .about-story__img-wrap { position: sticky; top: calc(var(--nav-h) + 2rem); }
 
 .about-story__img {
-  width: 100%;
-  min-height: 420px;
-  max-height: 620px;
-  height: 50vw;
+  aspect-ratio: 4/5;
   background: linear-gradient(145deg, #EDD9C8 0%, #D4B8A0 50%, #C4A080 100%);
   position: relative;
   overflow: hidden;
