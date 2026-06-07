@@ -335,14 +335,42 @@ h1, h2, h3, h4, h5, h6 {
   object-fit: cover;
   object-position: center top;
 }
-/* Dark overlay so text stays readable */
+/* Dark overlay on car only — flowers sit above this */
 .hero__bg::after {
   content: '';
   position: absolute;
   inset: 0;
+  z-index: 1;
   background:
     linear-gradient(to bottom, rgba(10,8,8,0.55) 0%, rgba(10,8,8,0.35) 50%, rgba(10,8,8,0.65) 100%),
     linear-gradient(to right, rgba(10,8,8,0.4) 0%, transparent 60%);
+}
+
+/* Flower overlay — above the dark tint, below the text content */
+/* Positioned relative to .hero (not inside .hero__bg) so it escapes the overlay */
+.hero__flowers {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  z-index: 2;
+  animation: flowerDrift 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Flower drift — cinematic, almost imperceptible */
+@keyframes flowerDrift {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25%      { transform: translate(1.5px, 1px) rotate(0.3deg); }
+  50%      { transform: translate(-1px, 2px) rotate(-0.4deg); }
+  75%      { transform: translate(1px, -1px) rotate(0.2deg); }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero__flowers { animation: none; }
 }
 
 .hero::before,
@@ -350,7 +378,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero__content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   max-width: 880px;
   padding: calc(var(--nav-h) + 3rem) clamp(1.5rem, 5vw, 3rem) 5rem;
 }
