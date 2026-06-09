@@ -327,7 +327,8 @@ h1, h2, h3, h4, h5, h6 {
   inset: 0;
   z-index: 0;
 }
-.hero__bg img {
+.hero__bg img,
+.hero__bg-video {
   position: absolute;
   inset: 0;
   width: 100%;
