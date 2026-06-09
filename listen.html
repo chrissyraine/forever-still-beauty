@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forever Still Music — Listen to the Full Catalog</title>
+  <meta name="description" content="41 songs. 48K+ plays. No label, no ads. Stream the full catalog from Forever Still Music by Chrissy Schroer.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.foreverstillmusic.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Forever Still Music — Listen">
+  <meta property="og:description" content="41 songs. 48K+ plays. No label, no ads.">
+  <meta property="og:image" content="https://www.foreverstillbeauty.com/images/album-cover.jpg">
+  <meta property="og:url" content="https://www.foreverstillmusic.com/">
+  <meta property="og:type" content="music.album">
+  <meta property="og:site_name" content="Forever Still Music">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Forever Still Music — Listen">
+  <meta name="twitter:description" content="41 songs. 48K+ plays. No label, no ads.">
+  <meta name="twitter:image" content="https://www.foreverstillbeauty.com/images/album-cover.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Allura&family=Inter:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Allura&family=Inter:wght@300;400;500&display=swap"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:         #120a0f;
+      --bg-soft:    #1a0d14;
+      --bg-warm:    #241218;
+      --gold:       #C8A96A;
+      --gold-dim:   #a8894a;
+      --text:       #f0ebe4;
+      --text-muted: #9c8c82;
+      --text-soft:  #cbbfb6;
+      --rule:       rgba(200, 169, 106, 0.18);
+
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-script:  'Allura', cursive;
+      --font-sans:    'Inter', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      font-size: 15px;
+      line-height: 1.7;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ── Layout ─────────────────────────────────────── */
+    .container {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* ── Nav ─────────────────────────────────────────── */
+    .nav {
+      padding: 28px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav__logo {
+      font-family: var(--font-script);
+      font-size: 1.7rem;
+      color: var(--gold);
+      letter-spacing: 0.01em;
+    }
+
+    .nav__link {
+      font-family: var(--font-sans);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      border: 1px solid var(--rule);
+      padding: 8px 18px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .nav__link:hover { color: var(--gold); border-color: var(--gold); }
+
+    /* ── Hero ────────────────────────────────────────── */
+    .hero {
+      padding: 60px 0 56px;
+      text-align: center;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 64px;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(200,169,106,0.07) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .hero__eyebrow {
+      font-family: var(--font-sans);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.75;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .hero__title {
+      font-family: var(--font-script);
+      font-size: clamp(3.5rem, 9vw, 6.5rem);
+      color: var(--text);
+      line-height: 1;
+      display: block;
+      margin-bottom: 24px;
+    }
+
+    .hero__stats {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .hero__stat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .hero__stat-num {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .hero__stat-label {
+      font-family: var(--font-sans);
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .hero__divider {
+      width: 1px;
+      height: 36px;
+      background: var(--rule);
+    }
+
+    /* ── Player ──────────────────────────────────────── */
+    .player-section {
+      margin-bottom: 72px;
+    }
+
+    .player-label {
+      font-family: var(--font-sans);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .player-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    .player-wrap {
+      border: 1px solid var(--rule);
+      overflow: hidden;
+      background: var(--bg-soft);
+    }
+
+    .player-wrap iframe {
+      display: block;
+      width: 100%;
+    }
+
+    /* ── Featured Track ──────────────────────────────── */
+    .featured-label {
+      font-family: var(--font-sans);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .featured-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    .featured-section {
+      margin-bottom: 72px;
+    }
+
+    .featured-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .featured-track {
+      border: 1px solid var(--rule);
+      background: var(--bg-soft);
+      overflow: hidden;
+    }
+
+    .featured-track iframe {
+      display: block;
+      width: 100%;
+    }
+
+    /* ── CTA Strip ───────────────────────────────────── */
+    .cta-strip {
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: 48px 0;
+      margin-bottom: 64px;
+      text-align: center;
+    }
+
+    .cta-strip__heading {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--text-soft);
+      margin-bottom: 28px;
+      line-height: 1.4;
+    }
+
+    .cta-strip__heading em {
+      font-style: normal;
+      color: var(--text);
+    }
+
+    .cta-strip__actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      font-family: var(--font-sans);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 12px 28px;
+      border: 1px solid transparent;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn--gold {
+      background: var(--gold);
+      color: var(--bg);
+      border-color: var(--gold);
+    }
+    .btn--gold:hover { background: transparent; color: var(--gold); }
+
+    .btn--ghost {
+      background: transparent;
+      color: var(--text-soft);
+      border-color: var(--rule);
+    }
+    .btn--ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* ── Streaming Links ─────────────────────────────── */
+    .streaming {
+      margin-bottom: 64px;
+      text-align: center;
+    }
+
+    .streaming__label {
+      font-family: var(--font-sans);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    .streaming__links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .streaming__link {
+      font-family: var(--font-sans);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      border: 1px solid var(--rule);
+      padding: 9px 20px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .streaming__link:hover { color: var(--gold); border-color: var(--gold); }
+
+    /* ── Footer ──────────────────────────────────────── */
+    .footer {
+      border-top: 1px solid var(--rule);
+      padding: 40px 0 32px;
+    }
+
+    .footer__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer__brand {
+      font-family: var(--font-script);
+      font-size: 1.3rem;
+      color: var(--gold);
+      opacity: 0.7;
+    }
+
+    .footer__copy {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .footer__copy a {
+      color: var(--gold);
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+    .footer__copy a:hover { opacity: 1; }
+
+    /* ── Responsive ──────────────────────────────────── */
+    @media (max-width: 640px) {
+      .container { padding: 0 20px; }
+      .hero { padding: 40px 0 40px; margin-bottom: 48px; }
+      .featured-grid { grid-template-columns: 1fr; }
+      .hero__divider { display: none; }
+      .footer__inner { flex-direction: column; align-items: flex-start; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Nav -->
+    <nav class="nav">
+      <span class="nav__logo">Forever Still Music</span>
+      <a href="https://www.foreverstillbeauty.com" class="nav__link">Full Artist Site &rarr;</a>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+      <span class="hero__eyebrow">Chrissy Schroer &nbsp;·&nbsp; Independent Artist</span>
+      <span class="hero__title">Listen</span>
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-num">41</span>
+          <span class="hero__stat-label">Songs</span>
+        </div>
+        <div class="hero__divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">48K+</span>
+          <span class="hero__stat-label">Plays</span>
+        </div>
+        <div class="hero__divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">$0</span>
+          <span class="hero__stat-label">Ads</span>
+        </div>
+        <div class="hero__divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">436</span>
+          <span class="hero__stat-label">Likes</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Full Catalog Player -->
+    <section class="player-section">
+      <p class="player-label">Full Catalog</p>
+      <div class="player-wrap">
+        <iframe
+          width="100%"
+          height="700"
+          scrolling="no"
+          frameborder="no"
+          allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/foreverstillbeauty&color=%23C8A96A&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"
+          title="Forever Still Music — Full Catalog on SoundCloud">
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Featured: Almost (Music Video) -->
+    <section class="featured-section">
+      <p class="featured-label">Now Playing</p>
+      <div class="featured-grid">
+
+        <!-- Almost -->
+        <div class="featured-track">
+          <iframe
+            width="100%"
+            height="166"
+            scrolling="no"
+            frameborder="no"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/foreverstillbeauty/almost&color=%23C8A96A&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
+            title="Almost — Forever Still Music">
+          </iframe>
+        </div>
+
+        <!-- 9pm to Sold Out (Album) -->
+        <div class="featured-track">
+          <iframe
+            width="100%"
+            height="166"
+            scrolling="no"
+            frameborder="no"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/foreverstillbeauty/sets/9pm-to-sold-out&color=%23C8A96A&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
+            title="9pm to Sold Out — Forever Still Music">
+          </iframe>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-strip">
+      <p class="cta-strip__heading">
+        Built in the middle of real life.<br>
+        <em>No label. No shortcuts. Just the work.</em>
+      </p>
+      <div class="cta-strip__actions">
+        <a href="https://www.foreverstillbeauty.com/album.html" class="btn btn--gold">Buy the Album — $9</a>
+        <a href="https://www.foreverstillbeauty.com/almost.html" class="btn btn--ghost">Watch Almost</a>
+        <a href="https://www.foreverstillbeauty.com/method.html" class="btn btn--ghost">Turn Your Story Into a Song</a>
+      </div>
+    </section>
+
+    <!-- Streaming -->
+    <section class="streaming">
+      <p class="streaming__label">Also available on</p>
+      <div class="streaming__links">
+        <a href="https://soundcloud.com/foreverstillbeauty" target="_blank" rel="noopener" class="streaming__link">SoundCloud</a>
+        <a href="https://open.spotify.com/artist/foreverstillbeauty" target="_blank" rel="noopener" class="streaming__link">Spotify</a>
+        <a href="https://music.apple.com/search?term=forever+still+music" target="_blank" rel="noopener" class="streaming__link">Apple Music</a>
+        <a href="https://www.youtube.com/@foreverstillbeauty" target="_blank" rel="noopener" class="streaming__link">YouTube</a>
+        <a href="https://www.tiktok.com/@foreverstillbeauty" target="_blank" rel="noopener" class="streaming__link">TikTok</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <span class="footer__brand">Forever Still Music</span>
+        <p class="footer__copy">
+          &copy; 2026 Forever Still Music &nbsp;&middot;&nbsp;
+          <a href="https://www.foreverstillbeauty.com">foreverstillbeauty.com</a>
+        </p>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>

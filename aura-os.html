@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="msvalidate.01" content="E0C6E18F4C0CC4E89583FDD7A9A06F0D" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>AURA — The Sovereign Operating System Behind Forever Still Music</title>
+  <meta name="description" content="Aura is Chrissy's engineered creative methodology — Visual Minimalism, Sonic Branding, and Strategic Friction. The intentional layer behind Forever Still Music." />
+
+  <!-- SEO -->
+  <meta name="keywords" content="AURA OS, sovereign operating system, digital twin, Forever Still Music, Chrissy Schroer, independent artist, AI workflow, custom OS" />
+  <link rel="canonical" href="https://www.foreverstillbeauty.com/aura-os.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AURA — The Sovereign Operating System Behind Forever Still Music" />
+  <meta property="og:description" content="I didn't buy a tool. I built an operating system. AURA runs my brands, my music, and my life — from one place." />
+  <meta property="og:image" content="https://www.foreverstillbeauty.com/images/hero.jpg" />
+  <meta property="og:url" content="https://www.foreverstillbeauty.com/aura-os.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Forever Still Music" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AURA — The Sovereign OS Behind Forever Still Music" />
+  <meta name="twitter:description" content="Not an app. A sovereign operating system Chrissy built to run three brands from one place." />
+  <meta name="twitter:image" content="https://www.foreverstillbeauty.com/images/album-cover.jpg" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "AURA — The Sovereign Operating System Behind Forever Still Music",
+    "description": "AURA is the custom AI operating system Chrissy Schroer built to run her three brands from one place.",
+    "url": "https://www.foreverstillbeauty.com/aura-os.html",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Forever Still Music",
+      "url": "https://www.foreverstillbeauty.com"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Chrissy Schroer"
+    }
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Allura&family=Inter:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Allura&family=Inter:wght@300;400;500&display=swap"></noscript><style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:          #1a1a1a;
+      --bg-soft:     #1f1f1f;
+      --bg-warm:     #242020;
+      --gold:        #C8A96A;
+      --blush:       #d4a5a5;
+      --text:        #f0ebe4;
+      --text-muted:  #9c8c82;
+      --text-soft:   #cbbfb6;
+      --rule:        rgba(200, 169, 106, 0.18);
+
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-script:  'Allura', cursive;
+      --font-sans:    'Inter', system-ui, sans-serif;
+      --max-w: 1100px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-display);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 40px; }
+    @media (max-width: 600px) { .container { padding: 0 20px; } }
+
+    /* ── NAV ─────────────────────────────────────────────────────── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(26,26,26,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--rule);
+      transition: background 0.3s;
+    }
+    .nav__inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px; height: 80px; max-width: var(--max-w); margin: 0 auto;
+    }
+    .nav__logo img { height: 90px; width: auto; display: block; padding: 6px 0; }
+    .nav__links { list-style: none; display: flex; gap: 22px; }
+    .nav__links a {
+      font-family: var(--font-sans); font-size: 11px; font-weight: 500;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--text-soft); text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav__links a:hover, .nav__links a.active { color: var(--gold); }
+    .nav__hamburger {
+      display: none; background: none; border: none; cursor: pointer; padding: 8px;
+    }
+    .nav__hamburger span {
+      display: block; width: 22px; height: 1.5px; background: var(--text);
+      margin: 5px 0; transition: 0.3s;
+    }
+    @media (max-width: 768px) {
+      .nav__links { display: none; }
+      .nav__hamburger { display: block; }
+    }
+
+    /* Mobile Drawer */
+    .nav__drawer {
+      position: fixed; top: 0; right: -100%; width: 80%; max-width: 320px;
+      height: 100vh; background: #111; z-index: 200;
+      display: flex; flex-direction: column; gap: 0; padding: 80px 40px 40px;
+      transition: right 0.35s ease; border-left: 1px solid var(--rule);
+    }
+    .nav__drawer.open { right: 0; }
+    .nav__drawer a {
+      font-family: var(--font-sans); font-size: 13px; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--text-soft); text-decoration: none;
+      padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.05);
+      transition: color 0.2s;
+    }
+    .nav__drawer a:hover { color: var(--gold); }
+    .nav__close {
+      position: absolute; top: 24px; right: 24px;
+      background: none; border: none; color: var(--text-muted);
+      font-size: 18px; cursor: pointer;
+    }
+
+    /* ── PAGE HERO ───────────────────────────────────────────────── */
+    .page-hero {
+      position: relative; min-height: 60vh;
+      display: flex; align-items: flex-end;
+      padding-bottom: 80px; overflow: hidden;
+      margin-top: 80px;
+    }
+    .page-hero__bg {
+      position: absolute; inset: 0; overflow: hidden; z-index: 0;
+    }
+    .page-hero__bg img {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: center 30%;
+      filter: brightness(0.35) saturate(0.6);
+    }
+    .page-hero__bg::before {
+      content: '';
+      position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(to bottom, rgba(26,26,26,0.2) 0%, rgba(26,26,26,0.85) 100%);
+    }
+    .page-hero__content {
+      position: relative; z-index: 2;
+      max-width: var(--max-w); margin: 0 auto; padding: 0 40px; width: 100%;
+    }
+    .page-hero__script {
+      font-family: var(--font-script); font-size: 28px; color: var(--gold);
+      display: block; margin-bottom: 12px;
+    }
+    .page-hero__name {
+      font-family: var(--font-display); font-size: clamp(40px, 6vw, 72px);
+      font-weight: 300; line-height: 1.1; color: var(--text);
+      margin-bottom: 20px;
+    }
+    .page-hero__name em { font-style: italic; color: var(--gold); }
+    .page-hero__sub {
+      font-family: var(--font-sans); font-size: 14px; color: var(--text-soft);
+      letter-spacing: 0.06em; max-width: 560px; line-height: 1.8;
+    }
+
+    /* ── SECTION BASE ────────────────────────────────────────────── */
+    .section { padding: 100px 0; }
+    .section--soft { background: var(--bg-soft); }
+    .section--warm { background: var(--bg-warm); }
+
+    .eyebrow {
+      font-family: var(--font-sans); font-size: 10px; font-weight: 500;
+      letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold);
+      margin-bottom: 16px; display: block;
+    }
+    .rule {
+      width: 48px; height: 1px; background: var(--gold);
+      margin-bottom: 24px; opacity: 0.6;
+    }
+    h2 {
+      font-family: var(--font-display); font-size: clamp(32px, 4vw, 52px);
+      font-weight: 300; line-height: 1.2; color: var(--text);
+      margin-bottom: 24px;
+    }
+    h2 em { font-style: italic; color: var(--gold); }
+    p { color: var(--text-soft); font-size: 17px; line-height: 1.85; margin-bottom: 20px; }
+    p:last-child { margin-bottom: 0; }
+
+    /* ── WHAT IS AURA ────────────────────────────────────────────── */
+    .intro__inner {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+    }
+    @media (max-width: 768px) { .intro__inner { grid-template-columns: 1fr; gap: 48px; } }
+
+    .intro__lead {
+      font-family: var(--font-display); font-size: clamp(20px, 2.5vw, 26px);
+      font-style: italic; color: var(--blush); line-height: 1.6;
+      border-left: 2px solid var(--gold); padding-left: 28px;
+    }
+
+    /* ── MODULE GRID ─────────────────────────────────────────────── */
+    .mod-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+      margin-top: 60px;
+    }
+    @media (max-width: 900px) { .mod-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .mod-grid { grid-template-columns: 1fr; } }
+
+    .mod-card {
+      background: var(--bg-soft); padding: 40px 32px;
+      border: 1px solid var(--rule); transition: border-color 0.3s;
+    }
+    .mod-card:hover { border-color: rgba(200,169,106,0.4); }
+    .mod-card--featured {
+      border-color: rgba(200,169,106,0.35);
+      background: #221e1a;
+    }
+    .mod-card--featured:hover { border-color: rgba(200,169,106,0.65); }
+
+    .mod-card__num {
+      font-family: var(--font-sans); font-size: 10px; font-weight: 500;
+      letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold);
+      margin-bottom: 20px; display: block;
+    }
+    .mod-card__title {
+      font-family: var(--font-display); font-size: 22px; font-weight: 400;
+      color: var(--text); margin-bottom: 14px; line-height: 1.3;
+    }
+    .mod-card p { font-size: 14px; line-height: 1.75; }
+
+    .mod-card__tag {
+      display: inline-block; margin-top: 16px;
+      font-family: var(--font-sans); font-size: 9px; font-weight: 500;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: #1a1a1a; background: var(--gold);
+      padding: 4px 10px;
+    }
+
+    /* ── STATS ───────────────────────────────────────────────────── */
+    .stats-row {
+      display: flex; gap: 0; border: 1px solid var(--rule); margin-top: 60px;
+    }
+    @media (max-width: 600px) { .stats-row { flex-direction: column; } }
+    .stat {
+      flex: 1; padding: 40px 32px; text-align: center;
+      border-right: 1px solid var(--rule);
+    }
+    .stat:last-child { border-right: none; }
+    .stat__num {
+      font-family: var(--font-display); font-size: 48px; font-weight: 300;
+      color: var(--gold); line-height: 1; display: block; margin-bottom: 8px;
+    }
+    .stat__label {
+      font-family: var(--font-sans); font-size: 10px; font-weight: 500;
+      letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted);
+    }
+
+    /* ── BUTTONS ─────────────────────────────────────────────────── */
+    .btn {
+      display: inline-block; padding: 14px 32px;
+      font-family: var(--font-sans); font-size: 11px; font-weight: 500;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      text-decoration: none; transition: all 0.25s; cursor: pointer; border: none;
+      box-shadow: 0 0 14px rgba(200,169,106,0.18), 0 0 32px rgba(200,169,106,0.08);
+    }
+    .btn--primary { background: var(--gold); color: #1a1a1a; }
+    .btn--primary:hover { background: #d4b87a; box-shadow: 0 0 22px rgba(200,169,106,0.45), 0 0 55px rgba(200,169,106,0.2); }
+    .btn--ghost { background: transparent; color: var(--gold); border: 1px solid rgba(200,169,106,0.45); }
+    .btn--ghost:hover { border-color: var(--gold); box-shadow: 0 0 22px rgba(200,169,106,0.35), 0 0 50px rgba(200,169,106,0.15); }
+
+    .cta-row { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 40px; }
+
+    /* ── FOOTER ──────────────────────────────────────────────────── */
+    .footer {
+      background: #111; border-top: 1px solid var(--rule);
+      padding: 60px 0 32px;
+    }
+    .footer__inner {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 20px;
+    }
+    .footer__logo {
+      font-family: var(--font-display); font-size: 22px; font-weight: 300;
+      color: var(--text); text-decoration: none;
+    }
+    .footer__links {
+      list-style: none; display: flex; gap: 28px; flex-wrap: wrap;
+    }
+    .footer__links a {
+      font-family: var(--font-sans); font-size: 11px; font-weight: 500;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--text-muted); text-decoration: none;
+    }
+    .footer__links a:hover { color: var(--gold); }
+    .footer__copy {
+      font-family: var(--font-sans); font-size: 11px; color: var(--text-muted);
+      text-align: center; margin-top: 48px; letter-spacing: 0.06em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ── Nav ─────────────────────────────────────────────────────── -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo"><img src="images/logo.png" alt="Forever Still Music" /></a>
+      <ul class="nav__links">
+        <li><a href="index.html#music">Listen</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#offer">Shop</a></li>
+        <li><a href="method.html">Your Song</a></li>
+        <li><a href="aura-os.html" class="active">Aura</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <nav class="nav__drawer" id="drawer">
+    <button class="nav__close" id="drawerClose">✕</button>
+    <a href="index.html#music">Listen</a>
+    <a href="about.html">About</a>
+    <a href="index.html#offer">Shop</a>
+    <a href="method.html">Your Song</a>
+    <a href="aura-os.html">Aura</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- ── Hero ─────────────────────────────────────────────────────── -->
+  <div class="page-hero">
+    <div class="page-hero__bg">
+      <img src="images/kids_band.jpg" alt="" aria-hidden="true" />
+    </div>
+    <div class="page-hero__content">
+      <span class="page-hero__script">Built from scratch. Runs everything.</span>
+      <h1 class="page-hero__name">AURA — <em>The OS</em></h1>
+      <p class="page-hero__sub">A sovereign operating system built to run three brands and a full home life from one place — no SaaS, no subscriptions, no dependency on someone else's system.</p>
+    </div>
+  </div>
+
+  <!-- ── What Is AURA ─────────────────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <div class="intro__inner">
+        <div>
+          <div class="rule"></div>
+          <span class="eyebrow">What it is</span>
+          <h2>I didn't buy a tool.<br />I built <em>an operating system.</em></h2>
+          <p>AURA is my digital twin. It's a sovereign operating system I built to run my entire ecosystem — Forever Still Beauty, Studio, Music, and my home life as a solo mom — from one place.</p>
+          <p>It runs locally. No SaaS. No subscriptions. No third-party platform holding my workflow hostage. Every AI inside AURA is wired to my voice, my catalog, my brand standards, and my actual life.</p>
+          <p>It's not an app I bought. It's an OS I built so I can run an ecosystem solo without losing my mind.</p>
+        </div>
+        <div>
+          <p class="intro__lead">"AURA is a custom operating system I built to run all three of my brands plus my home life from one place — every AI inside it knows my voice, my catalog, and my workflow."</p>
+        </div>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat">
+          <span class="stat__num">32K+</span>
+          <span class="stat__label">Collective plays</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">9</span>
+          <span class="stat__label">Modules — one OS</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">$0</span>
+          <span class="stat__label">Ad spend</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">3</span>
+          <span class="stat__label">Brands. One system.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── The 9 Modules ────────────────────────────────────────────── -->
+  <section class="section section--soft">
+    <div class="container">
+      <div class="rule"></div>
+      <span class="eyebrow">Inside AURA</span>
+      <h2>Nine modules. <em>One ecosystem.</em></h2>
+
+      <div class="mod-grid">
+
+        <div class="mod-card">
+          <span class="mod-card__num">01 — Strategy</span>
+          <div class="mod-card__title">War Room</div>
+          <p>Brand strategy, campaign planning, and decision architecture. The command center where direction gets set before anything else moves.</p>
+        </div>
+
+        <div class="mod-card">
+          <span class="mod-card__num">02 — Studio</span>
+          <div class="mod-card__title">Studio Workshop</div>
+          <p>Visual production, content creation, and creative output for Forever Still Studio — all aligned to brand voice and identity standards built into the system.</p>
+        </div>
+
+        <div class="mod-card mod-card--featured">
+          <span class="mod-card__num">03 — Music</span>
+          <div class="mod-card__title">Music Workshop</div>
+          <p>Lyric forge, release tracking, and a Songwriting Coach trained on Chrissy's sonic fingerprint. Every tool inside this module knows the catalog, the tone, and the story behind the music.</p>
+          <span class="mod-card__tag">You're here</span>
+        </div>
+
+        <div class="mod-card">
+          <span class="mod-card__num">04 — Beauty</span>
+          <div class="mod-card__title">Beauty Workshop</div>
+          <p>Workflow and content engine for Forever Still Beauty — the label behind the plays. Brand voice, product storytelling, and campaign assets built from the same root system.</p>
+        </div>
+
+        <div class="mod-card">
+          <span class="mod-card__num">05 — Safety</span>
+          <div class="mod-card__title">Guardian</div>
+          <p>Home security, family safety protocols, and contingency planning. Solo mom infrastructure. Because running a business and raising two boys at the same time requires systems, not just hope.</p>
+        </div>
+
+        <div class="mod-card">
+          <span class="mod-card__num">06 — Foundation</span>
+          <div class="mod-card__title">Core</div>
+          <p>The foundation layer connecting all eight modules. Shared memory, brand standards, voice calibration, and workflow logic that keeps the whole ecosystem coherent.</p>
+        </div>
+
+        <div class="mod-card">
+          <span class="mod-card__num">07 — Family</span>
+          <div class="mod-card__title">Boys Workshop</div>
+          <p>Education support, scheduling, and parenting workflows for two boys. Built because their lives don't pause when the brands need to ship.</p>
+        </div>
+
+        <div class="mod-card">
+          <span class="mod-card__num">08 — Rhythm</span>
+          <div class="mod-card__title">Rituals</div>
+          <p>Daily rhythms, routines, and practices that keep a solo operator sustainable. Because burnout isn't a productivity problem — it's a systems problem.</p>
+        </div>
+
+        <div class="mod-card">
+          <span class="mod-card__num">09 — Sanctuary</span>
+          <div class="mod-card__title">Sanctum</div>
+          <p>Personal space. Rest, reflection, and the private work that never makes it onto a website. The part of the OS that exists for her, not for output.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Why It Exists ─────────────────────────────────────────────── -->
+  <section class="section section--warm">
+    <div class="container" style="max-width: 760px;">
+      <div class="rule"></div>
+      <span class="eyebrow">Why it exists</span>
+      <h2>The tools weren't built for someone like me.<br />So I <em>built the tools.</em></h2>
+      <p>I'm a U.S. Army veteran and solo mom of two. I run three brands. I raise two boys alone. I write, produce, and release music independently. There is no team. There is no backup plan.</p>
+      <p>Every SaaS tool I tried assumed I had a department. Every AI product assumed I'd outsource context. AURA exists because I needed something that knew my whole life — not just one slice of it — and could actually help me run it.</p>
+      <p>32,000+ collective plays. Zero ads. No label but Forever Still Beauty. Built on a system nobody sold me, because it didn't exist until I made it.</p>
+
+      <div class="cta-row">
+        <a href="index.html#music" class="btn btn--primary">Listen to the Album</a>
+        <a href="method.html" class="btn btn--ghost">Turn Your Story Into a Song</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="index.html" class="footer__logo">Forever Still Music</a>
+        <ul class="footer__links">
+          <li><a href="index.html#music">Listen</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="method.html">Your Song</a></li>
+          <li><a href="aura-os.html">Aura</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <p class="footer__copy">&copy; 2026 Forever Still Music. &nbsp;·&nbsp; <a href="mailto:chrissy@foreverstillstudio.com" style="color:var(--gold);text-decoration:none;">chrissy@foreverstillstudio.com</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const drawer    = document.getElementById('drawer');
+    const close     = document.getElementById('drawerClose');
+    hamburger.addEventListener('click', () => drawer.classList.add('open'));
+    close.addEventListener('click', () => drawer.classList.remove('open'));
+    drawer.querySelectorAll('a').forEach(a =>
+      a.addEventListener('click', () => drawer.classList.remove('open'))
+    );
+  </script>
+
+</body>
+</html>
