@@ -529,6 +529,8 @@
   </style>
 </head>
 <body>
+  <canvas id="sparkleCanvas" aria-hidden="true" style="position:fixed;inset:0;z-index:9999;pointer-events:none;width:100%;height:100%;"></canvas>
+  
 
   <!-- ── Navigation ──────────────────────────────────────────── -->
   <nav class="nav" id="nav">
@@ -708,6 +710,71 @@
     drawer.querySelectorAll('a').forEach(a =>
       a.addEventListener('click', () => drawer.classList.remove('open'))
     );
+  </script>
+
+
+  <!-- Gold cursor sparkle trail (ported from Forever Still Studio) -->
+  <script>
+  (function () {
+    var canvas = document.getElementById('sparkleCanvas');
+    if (!canvas) return;
+    if (window.matchMedia('(max-width: 768px)').matches) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var ctx = canvas.getContext('2d');
+    var sparkles = [];
+    var lastX = 0, lastY = 0;
+    var MIN_DIST = 8;
+    var GOLD = { r: 200, g: 169, b: 106 };
+    function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+    resize();
+    window.addEventListener('resize', resize);
+    function drawSparkle(x, y, size, alpha, rotation) {
+      ctx.save();
+      ctx.translate(x, y);
+      ctx.rotate(rotation);
+      ctx.globalAlpha = alpha;
+      ctx.fillStyle = 'rgb(' + GOLD.r + ',' + GOLD.g + ',' + GOLD.b + ')';
+      var outer = size, inner = size * 0.35;
+      ctx.beginPath(); ctx.moveTo(0,-outer); ctx.lineTo(inner,-inner); ctx.lineTo(0,0); ctx.lineTo(-inner,-inner); ctx.closePath(); ctx.fill();
+      ctx.beginPath(); ctx.moveTo(0,0); ctx.lineTo(inner,inner); ctx.lineTo(0,outer); ctx.lineTo(-inner,inner); ctx.closePath(); ctx.fill();
+      ctx.beginPath(); ctx.moveTo(-outer,0); ctx.lineTo(-inner,inner); ctx.lineTo(0,0); ctx.lineTo(-inner,-inner); ctx.closePath(); ctx.fill();
+      ctx.beginPath(); ctx.moveTo(0,0); ctx.lineTo(inner,inner); ctx.lineTo(outer,0); ctx.lineTo(inner,-inner); ctx.closePath(); ctx.fill();
+      ctx.restore();
+    }
+    document.addEventListener('mousemove', function (e) {
+      var dx = e.clientX - lastX, dy = e.clientY - lastY;
+      var dist = Math.sqrt(dx*dx + dy*dy);
+      if (dist > MIN_DIST) {
+        var count = dist > 30 ? 2 : 1;
+        for (var i = 0; i < count; i++) {
+          sparkles.push({
+            x: e.clientX + (Math.random()-0.5)*10,
+            y: e.clientY + (Math.random()-0.5)*10,
+            size: 3 + Math.random()*5,
+            alpha: 0.7 + Math.random()*0.3,
+            rotation: Math.random()*Math.PI,
+            driftX: (Math.random()-0.5)*0.6,
+            driftY: -0.3 - Math.random()*0.5,
+            fadeRate: 0.015 + Math.random()*0.01,
+            spin: (Math.random()-0.5)*0.04
+          });
+        }
+      }
+      lastX = e.clientX; lastY = e.clientY;
+    });
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (var i = sparkles.length - 1; i >= 0; i--) {
+        var s = sparkles[i];
+        s.alpha -= s.fadeRate; s.x += s.driftX; s.y += s.driftY;
+        s.rotation += s.spin; s.size *= 0.98;
+        if (s.alpha <= 0 || s.size < 0.5) { sparkles.splice(i, 1); continue; }
+        drawSparkle(s.x, s.y, s.size, s.alpha, s.rotation);
+      }
+      requestAnimationFrame(animate);
+    }
+    animate();
+  })();
   </script>
 
 </body>
